@@ -17,3 +17,13 @@ contract Y {
 }
 
 // 2 ways to initialize 
+
+contract A is X("X"), Y("This is Y") {
+
+}
+
+contract B is X, Y {
+    constructor(string memory _name, string memory _text) X(_name), Y(_text) {}
+}
+
+// order constructor call is based on order inheritance
