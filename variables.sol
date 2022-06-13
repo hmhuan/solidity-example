@@ -25,5 +25,5 @@ contract Variables {
     // constant cannot be modified
     // their value is hardcoded and using constant can save gas cost
     address public constant MY_ADDRESS = 0x777788889999AaAAbBbbCcccddDdeeeEfFFfCcCc;
-    uint public constant MY_INT = 1234;
+    uint public constant MY_INT = 1234;    
 }
