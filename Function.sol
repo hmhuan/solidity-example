@@ -51,10 +51,23 @@ contract Function {
 
     }
 
-    // create a local array
+    // create a state array
     uint[] public arr;
 
     function arrayOutput() public view returns (uint[] memory) {
         return arr;
+    }
+
+    uint public x = 1;
+
+    // Getter function can be decalred view or pure 
+    // view: no state will be changed
+    function addToX(uint y) public view returns (uint) {
+        return x + y;
+    }
+
+    // pure: no state will be changed or read
+    function add(uint i, uint j) public pure returns (uint) {
+        return i + j;
     }
 }
