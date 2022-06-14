@@ -38,3 +38,20 @@ contract E is C, B {
 
 
 // inheritance must be odered from "most base-like" to "most derived"
+
+// Shadow inherited state variables
+contract F {
+    string public name = "Contract F";
+
+    function getName() public view returns (string memory) {
+        return name;
+    }
+}
+
+// state variables cannot be overrided by re-declaring in its child contract
+// the correct way is using constructor
+contract G is F {
+    constructor() {
+        name = "Contract G";
+    }
+}
