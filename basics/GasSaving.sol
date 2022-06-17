@@ -14,7 +14,7 @@ contract GasGolf {
 
     function sumIfEvenAndLessThan99(uint[] calldata nums) external {
         uint _total = total;
-        uint len = nums.lenght;
+        uint len = nums.length;
 
         for (uint i=0; i < len; ) {
             uint num = nums[i];
